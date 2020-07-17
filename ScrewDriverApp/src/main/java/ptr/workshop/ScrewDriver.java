@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class ScrewDriver {
     private String name;
-    private ScrewType screwType;
+    private HeadType headType;
     private double driverLength;
     private double driverDiameter;
     private LocalDate dateOfPurchase;
@@ -13,10 +13,10 @@ public class ScrewDriver {
     private boolean isGood;
     private String comment;
 
-    public ScrewDriver(String name, ScrewType screwType, double driverLength, double driverDiameter,
+    public ScrewDriver(String name, HeadType headType, double driverLength, double driverDiameter,
                        LocalDate dateOfPurchase, LocalDate dateOfManufacture) {
         this.name = name;
-        this.screwType = screwType;
+        this.headType = headType;
         this.driverLength = driverLength;
         this.driverDiameter = driverDiameter;
         this.dateOfPurchase = dateOfPurchase;
@@ -44,8 +44,8 @@ public class ScrewDriver {
         return name;
     }
 
-    public ScrewType getScrewType() {
-        return screwType;
+    public HeadType getHeadType() {
+        return headType;
     }
 
     public double getDriverLength() {

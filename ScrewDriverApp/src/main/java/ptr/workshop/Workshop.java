@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class Workshop {
 
     private String workshopName;
-    private ArrayList<ScrewType> myScrews;
+    private ArrayList<HeadType> myScrews;
     private ArrayList<ScrewDriver> myScrewDrivers;
     private HashMap<String, Integer> location;
 
@@ -14,7 +14,7 @@ public class Workshop {
         this.workshopName = name;
     }
 
-    public Workshop(String workshopName, ArrayList<ScrewType> myScrews,
+    public Workshop(String workshopName, ArrayList<HeadType> myScrews,
                     ArrayList<ScrewDriver> myScrewDrivers, HashMap<String, Integer> location) {
         this.workshopName = workshopName;
         this.myScrews = myScrews;
@@ -28,7 +28,7 @@ public class Workshop {
         return workshopName;
     }
 
-    public ArrayList<ScrewType> getMyScrews() {
+    public ArrayList<HeadType> getMyScrews() {
         return myScrews;
     }
 
@@ -42,7 +42,7 @@ public class Workshop {
 
     //setters
 
-    public void setMyScrews(ArrayList<ScrewType> myScrews) {
+    public void setMyScrews(ArrayList<HeadType> myScrews) {
         this.myScrews = myScrews;
     }
 

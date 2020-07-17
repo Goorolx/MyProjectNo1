@@ -2,13 +2,13 @@ package ptr.workshop;
 
 public class Screw {
     private String name;
-    private ScrewType screwType;
+    private HeadType headType;
     private double screwLength;
     private double screwDiameter;
 
-    public Screw(String name, ScrewType screwType, double screwLength, double screwDiameter) {
+    public Screw(String name, HeadType headType, double screwLength, double screwDiameter) {
         this.name = name;
-        this.screwType = screwType;
+        this.headType = headType;
         this.screwLength = screwLength;
         this.screwDiameter = screwDiameter;
     }
@@ -17,8 +17,8 @@ public class Screw {
         return name;
     }
 
-    public ScrewType getScrewType() {
-        return screwType;
+    public HeadType getHeadType() {
+        return headType;
     }
 
     public double getScrewLength() {

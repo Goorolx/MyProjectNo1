@@ -1,5 +1,5 @@
 package ptr.workshop;
 
-public enum ScrewType {
+public enum HeadType {
     FlatHead, Phillips, Allan, Torx;
 }

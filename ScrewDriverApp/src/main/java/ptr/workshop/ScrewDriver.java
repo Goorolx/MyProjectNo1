@@ -24,4 +24,57 @@ public class ScrewDriver {
     }
 
 
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDaysInUsage(int daysInUsage) {
+        this.daysInUsage = daysInUsage;
+    }
+
+    public void setGood(boolean good) {
+        isGood = good;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public ScrewType getScrewType() {
+        return screwType;
+    }
+
+    public double getDriverLength() {
+        return driverLength;
+    }
+
+    public double getDriverDiameter() {
+        return driverDiameter;
+    }
+
+    public LocalDate getDateOfPurchase() {
+        return dateOfPurchase;
+    }
+
+    public LocalDate getDateOfManufacture() {
+        return dateOfManufacture;
+    }
+
+    public int getDaysInUsage() {
+        return daysInUsage;
+    }
+
+    public boolean isGood() {
+        return isGood;
+    }
+
+    public String getComment() {
+        return comment;
+    }
 }

@@ -41,9 +41,9 @@ class ScrewDriverTestSuite {
     @Test
     public void shouldIncreaseDaysInUsage() {
         sd.useScrewDriverDay(7);
-        LocalDate daysU = sd.getDaysInUsage();
+        int daysU = sd.getDaysInUsage();
 
-        assertEquals(LocalDate.now().plusDays(7), daysU);
+        assertEquals(7, daysU);
     }
 
     @Test

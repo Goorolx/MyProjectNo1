@@ -24,8 +24,6 @@ public class ScrewDriver {
     }
 
 
-
-
     public void setName(String name) {
         this.name = name;
     }

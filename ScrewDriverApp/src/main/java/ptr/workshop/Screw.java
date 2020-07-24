@@ -15,6 +15,17 @@ public class Screw{
         this.screwDiameter = screwDiameter;
     }
 
+    public void editScrew(String name, HeadType headType, double screwLength, double screwDiameter) throws Exception{
+        if (name.equals(null)) throw new WrongInputException();
+        else setName(name);
+        setHeadType(headType);
+        if (screwLength<=0) throw new WrongInputException();
+        else setScrewLength(screwLength);
+        if (screwDiameter<=0) throw new WrongInputException();
+        else setScrewDiameter(screwDiameter);
+
+    }
+
     public String getName() {
         return name;
     }
@@ -33,5 +44,17 @@ public class Screw{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setHeadType(HeadType headType) {
+        this.headType = headType;
+    }
+
+    public void setScrewLength(double screwLength) {
+        this.screwLength = screwLength;
+    }
+
+    public void setScrewDiameter(double screwDiameter) {
+        this.screwDiameter = screwDiameter;
     }
 }

@@ -40,6 +40,21 @@ public class ScrewTestSuite {
         String sName = s.getHeadType().name();
         System.out.println(sName);
     }
+    @Test
+    public void shouldEditScrewSizeAndDiameter() throws Exception{
+        s.editScrew("newname", HeadType.Allen, 55.6, 0.9);
+        assertEquals(55.6, s.getScrewLength());
+        assertEquals(0.9,s.getScrewDiameter());
+        assertEquals(HeadType.Allen, s.getHeadType());
+        assertEquals("newname",s.getName());
+    }
+    @Test
+    public void shouldThrowExceptionSubZeroValues() throws Exception{
+        assertThrows(WrongInputException.class,
+                ()->s.editScrew("null",HeadType.FlatHead,-5,0.9));
+        assertThrows(WrongInputException.class,
+        ()->s.editScrew("null",HeadType.FlatHead,5.0,0));
+    }
 
     @BeforeAll
     public static void testingStartMessage() {

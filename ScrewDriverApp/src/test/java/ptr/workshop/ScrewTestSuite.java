@@ -8,12 +8,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ScrewTestSuite {
 
+    public ScrewTestSuite() throws Exception {
+    }
     //Workshop izbecka = new Workshop("Izbecka");
     Screw s = new Screw("a1", HeadType.FlatHead, 5.5, 0.5);
 
+
     //Basic Tests to check main functionalities
     @Test
-    public void shouldAddNewScrewWithCorrectParameters() {
+    public void shouldAddNewScrewWithCorrectParameters() throws Exception {
         //given
         Screw s1 = new Screw("a12", HeadType.Phillips, 5.5, 0.5);
         //when
@@ -24,6 +27,12 @@ public class ScrewTestSuite {
         assertEquals(5.5, s1.getScrewLength());
         assertEquals(0.5, s1.getScrewDiameter());
         assertEquals("a12",s1.getName());
+    }
+    @Test void shouldNotAddScrewWithZeroOrNegativeLength(){
+        assertThrows(WrongInputException.class,
+                ()->{Screw s1 = new Screw("a12", HeadType.Phillips, -5.5, 0.8);});
+        assertThrows(WrongInputException.class,
+                ()->{Screw s1 = new Screw("a12", HeadType.Phillips, 5.5, -0.8);});
     }
 
     @Test
